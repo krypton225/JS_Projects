@@ -1,0 +1,67 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: "Poppins";
+}
+
+.header {
+  width: 100vw;
+  height: 8vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(97, 97, 97, 0.411);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.26);
+}
+
+.header__link {
+  position: relative;
+  margin: 0 10px;
+  font-size: 16px;
+  color: #000;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in;
+}
+
+.header__link::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 0;
+}
+
+.change-color {
+  color: #fff;
+}
+
+.pikker {
+  width: 100vw;
+  height: 92vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  transition: background-color 0.6s ease-in-out;
+}
+
+.pikker__title {
+  font-weight: bold;
+  letter-spacing: 1.4px;
+  margin-bottom: 2rem;
+}
+
+.pikker__btn {
+  width: 10rem;
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid rgba(0, 0, 0, 0.507);
+  outline: none;
+  font-weight: bold;
+  letter-spacing: 1.4px;
+  text-transform: capitalize;
+  background-color: transparent;
+  cursor: pointer;
+}
