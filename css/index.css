@@ -1,0 +1,30 @@
+:root {
+  --increase: 1;
+}
+
+.links {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 255, 142);
+  counter-reset: increaing;
+}
+
+.links__item {
+  width: 350px;
+  padding: 15px 20px;
+  border-radius: 5px;
+  border: 2px solid rgba(0, 0, 0, 0.26);
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.links__item__title::before {
+  counter-increment: increaing;
+  content: counter(increaing) " - ";
+}
