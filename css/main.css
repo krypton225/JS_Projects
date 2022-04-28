@@ -15,6 +15,10 @@ a {
   position: relative;
 }
 
+img {
+  object-fit: cover;
+}
+
 a::after {
   content: "";
   position: absolute;
