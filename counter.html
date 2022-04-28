@@ -21,22 +21,24 @@
     <link rel="stylesheet" href="css/main.css">
 
     <!-- * There are all css used -->
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/counter.css">
 </head>
 
 <body>
 
-    <section class="links">
-        <div class="links__item">
-            <h3 class="links__item__title">Color Flipper</h3>
-            <a href="color-flipper.html" class="links__item__goto">Go to</a>
-        </div> <!-- ./links__item -->
-        <div class="links__item">
-            <h3 class="links__item__title">Counter</h3>
-            <a href="counter.html" class="links__item__goto">Go to</a>
-        </div> <!-- ./links__item -->
-    </section> <!-- ./links -->
+    <section id="content" class="content">
+        <h2 class="content__title">counter</h2>
+        <p class="content__counter" id="countNumber">0</p>
 
+        <div class="content__btns">
+            <button class="content__btn increase" id="increaseBtn">increase</button>
+            <button class="content__btn decrease" id="decreaseBtn">decrease</button>
+            <button class="content__btn reset" id="resetBtn">reset</button>
+        </div> <!-- ./content__btns -->
+    </section> <!-- ./content -->
+
+    <!-- * Scripts -->
+    <script src="js/counter.js"></script>
 </body>
 
 </html>
