@@ -1,0 +1,73 @@
+body {
+  font-size: 10px;
+}
+
+.quotes {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: darkseagreen;
+}
+
+.quotes__body {
+  width: 55%;
+  height: 4rem;
+  text-align: center;
+}
+
+@media (max-width: 770px) {
+  .quotes__body {
+    width: 80%;
+  }
+}
+
+.quotes__body__desc {
+  padding: 30px;
+  position: relative;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+  line-height: 30px;
+}
+
+.quotes__body__author {
+  display: inline-block;
+  position: relative;
+  margin: 0.5rem auto;
+  text-transform: capitalize;
+  font-size: 1.3rem;
+}
+
+.quotes__body__author::after {
+  content: "\f10e";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 0.8rem;
+  position: absolute;
+  right: -30px;
+  top: -10px;
+}
+
+.quotes__random {
+  width: 50%;
+  height: 8%;
+  margin: 8rem auto;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  font-size: 1rem;
+  text-transform: capitalize;
+  letter-spacing: 1.5px;
+  background-color: tomato;
+  color: #fff;
+}
+
+@media (max-width: 770px) {
+  .quotes__random {
+    width: 70%;
+    margin-top: 12rem;
+  }
+}
