@@ -1,0 +1,134 @@
+body {
+  font-size: 10px;
+}
+
+.content {
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+
+.show {
+  width: 10rem;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  padding: 0.7rem 1.1rem;
+  text-transform: capitalize;
+  background-color: crimson;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.content__modal {
+  width: 50%;
+  height: 22rem;
+  border-radius: 20px;
+  padding: 1rem;
+  margin-top: 2rem;
+  position: relative;
+  border: 1px solid rgba(121, 121, 121, 0.568);
+  font-size: 1.1rem;
+  background-color: #fff;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.6s ease-in-out;
+  box-shadow: 0 10px 20px 2px rgb(75, 75, 75);
+}
+
+@media (max-width: 860px) {
+  .content__modal {
+    width: 60%;
+  }
+}
+
+@media (max-width: 510px) {
+  .content__modal {
+    width: 90%;
+  }
+}
+
+.content__modal__close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.content__modal__close:hover {
+  transform: rotate(180deg);
+}
+
+.content__modal__title {
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  margin-top: 0;
+}
+
+.content__modal__img {
+  width: 20%;
+  height: 50%;
+  border-radius: 50%;
+  margin: 1.4rem auto;
+}
+
+@media (max-width: 860px) {
+  .content__modal__img {
+    width: 40%;
+  }
+}
+
+.content__modal__img img {
+  width: 100%;
+  height: 90%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.content__modal__desc {
+  font-size: 0.9rem;
+  line-height: 22px;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 860px) {
+  .content__modal__desc {
+    line-height: 18px;
+  }
+}
+
+.content__modal__contact {
+  width: 40%;
+  margin: 2rem auto;
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+@media (max-width: 860px) {
+  .content__modal__contact {
+    margin-top: 0.7rem;
+  }
+}
+
+.content__modal__contact__link i {
+  transition: transform 0.3s ease-in-out;
+}
+
+.content__modal__contact__link i:hover {
+  transform: rotate(360deg);
+}
