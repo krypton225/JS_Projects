@@ -1,0 +1,94 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: salmon;
+  font-size: 10px;
+  overflow: hidden;
+}
+
+.hearts {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hearts__emojes {
+  height: 70%;
+  position: fixed;
+  top: -10vh;
+  font-size: 1.2rem;
+}
+
+.move-div-animation {
+  animation-name: move-div;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+.add-animation-1 {
+  display: inline-block;
+  animation-name: move-hearts;
+  animation-duration: 2.6s;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+  animation-play-state: running;
+  animation-iteration-count: 1;
+}
+
+.add-animation-2 {
+  display: inline-block;
+  animation-name: move-hearts;
+  animation-duration: 2.4s;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+  animation-play-state: running;
+  animation-iteration-count: 1;
+}
+
+.hearts__show {
+  width: 5rem;
+  height: 5rem;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  align-items: center;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+  letter-spacing: 1.5px;
+  text-transform: capitalize;
+  font-weight: 400;
+  font-size: 1rem;
+  background-color: darkslategray;
+  color: aliceblue;
+  z-index: 99999999;
+}
+
+@keyframes move-div {
+  0% {
+    transform: translateY(-500px);
+  }
+
+  100% {
+    transform: translateY(500px);
+  }
+}
+
+@keyframes move-hearts {
+  0% {
+    transform: translateY(-10vh);
+  }
+
+  100% {
+    transform: translateY(110vh);
+  }
+}
