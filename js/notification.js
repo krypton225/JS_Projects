@@ -61,6 +61,7 @@ notificationIconBell.addEventListener("click", () => {
 });
 
 /**
+ * * 1-Load all notifications after load the page.
  * * 2- Set the length of the array (number of the getten notifications).
  **/
 
