@@ -1,3 +1,46 @@
+const arrItems = [
+  {
+    notiDesc:
+      "1- Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto alias dolores quaerat facere!",
+    notiTime: "6 hours ago",
+  },
+  {
+    notiDesc:
+      "2- Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto alias dolores quaerat facere!",
+    notiTime: "16 hours ago",
+  },
+  {
+    notiDesc:
+      "3- Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto alias dolores quaerat facere!",
+    notiTime: "7 hours ago",
+  },
+  {
+    notiDesc:
+      "4- Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto alias dolores quaerat facere!",
+    notiTime: "5 hours ago",
+  },
+  {
+    notiDesc:
+      "5- Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto alias dolores quaerat facere!",
+    notiTime: "13 hours ago",
+  },
+  {
+    notiDesc:
+      "6- Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto alias dolores quaerat facere!",
+    notiTime: "5 hours ago",
+  },
+  {
+    notiDesc:
+      "7- Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto alias dolores quaerat facere!",
+    notiTime: "2 hours ago",
+  },
+  {
+    notiDesc:
+      "8- Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto alias dolores quaerat facere!",
+    notiTime: "1 hours ago",
+  },
+];
+
 let mySelectionIconNotification = document.querySelectorAll(
   ".notification__list__selections .fa-ellipsis-h"
 );
@@ -15,6 +58,16 @@ let notificationIconBell = document.getElementById("notificationIcon");
 notificationIconBell.addEventListener("click", () => {
   let notificationList = document.querySelector(".notification__list");
   notificationList.classList.toggle("noti-list-show");
+});
+
+/**
+ * * 2- Set the length of the array (number of the getten notifications).
+ **/
+
+window.addEventListener("load", () => {
+  // * Set the numeber of the notifications on the bell icon.
+  let getAfterElementOfIcon = document.querySelector(".notification__icon");
+  getAfterElementOfIcon.setAttribute("get-numbers", arrItems.length);
 });
 
 /**
