@@ -1,0 +1,194 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  font-size: 10px;
+  background-color: cornflowerblue;
+}
+
+.notification {
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media (max-width: 500px) {
+  .notification {
+    width: 70%;
+  }
+}
+
+.notification__icon {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  padding: 1.2rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  font-weight: 700;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.notification__icon:hover,
+.notification__icon:active {
+  background-color: rgb(106, 134, 185);
+  color: #fff;
+}
+
+.notification__list {
+  min-width: 10rem;
+  border: 1px solid rgba(0, 0, 0, 0.719);
+  padding: 0.1rem;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.noti-list-show {
+  visibility: visible;
+  opacity: 1;
+}
+
+.notification__list__item {
+  width: 100%;
+  position: relative;
+  min-height: 3rem;
+  padding: 0.3rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(68, 68, 68, 0.418);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.notification__list__item:hover .fa-ellipsis-h {
+  visibility: visible;
+  opacity: 1;
+}
+
+.notification__list__avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.notification__list__avatar img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.notification__list__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0 0.7rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.lighter-font {
+  font-weight: 400 !important;
+}
+
+.notification__list__info__desc {
+  font-weight: bold;
+  line-height: -12px;
+}
+
+.notification__list__info__date {
+  align-self: flex-start;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.4rem;
+  font-size: 0.6rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  line-height: 20px;
+}
+
+.notification__list__info__date .fa-circle {
+  width: 8px;
+  height: 8px;
+  margin-right: 5px;
+  font-size: 6px;
+}
+
+.notification__list__selections {
+  /* min-width: 230px; */
+  height: 100%;
+  position: relative;
+}
+
+.notification__list__selections .fa-ellipsis-h {
+  width: 25px;
+  height: 25px;
+  padding: 0.7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: #fff;
+  background-color: rgba(134, 134, 134, 0.685);
+  font-size: 0.8rem;
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  cursor: pointer;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.show-ellipsis-icon {
+  visibility: visible;
+  opacity: 1;
+}
+
+.notification__list__selections__content {
+  width: 220px;
+  position: absolute;
+  bottom: -70px;
+  right: 30px;
+  border-radius: 10px;
+  padding: 0.8rem;
+  background-color: #fff;
+  font-size: 0.8rem;
+  display: none;
+  z-index: 999999;
+}
+
+.visible-selection-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.notification__list__selections__delete {
+  margin-bottom: 0.6rem;
+}
+
+.notification__list__selections__delete,
+.notification__list__selections__read {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+}
+
+.fa-window-close,
+.fa-check {
+  margin-right: 10px;
+}
+
+.notification__list__selections__delete__desc,
+.notification__list__selections__read__desc {
+  text-transform: capitalize;
+}
