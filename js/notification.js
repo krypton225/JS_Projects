@@ -66,6 +66,8 @@ notificationIconBell.addEventListener("click", () => {
  **/
 
 window.addEventListener("load", () => {
+  let myULNotificationList = document.querySelector(".notification__list");
+
   // * Set the numeber of the notifications on the bell icon.
   let getAfterElementOfIcon = document.querySelector(".notification__icon");
   getAfterElementOfIcon.setAttribute("get-numbers", arrItems.length);
