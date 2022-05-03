@@ -87,6 +87,11 @@ body {
   opacity: 1;
 }
 
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
 .notification__list__item {
   width: 100%;
   position: relative;

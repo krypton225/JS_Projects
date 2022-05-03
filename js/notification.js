@@ -55,10 +55,27 @@ let notificationIconBell = document.getElementById("notificationIcon");
  * * Select bell icon and show the body of the notification list.
  **/
 
+let notificationList = document.querySelector(".notification__list");
+let notificationListID = document.getElementById("notificationListID");
+
 notificationIconBell.addEventListener("click", () => {
-  let notificationList = document.querySelector(".notification__list");
   notificationList.classList.toggle("noti-list-show");
 });
+
+/**
+ * * Close the notification list when click on anywhere at the body of the window.
+ **/
+
+// window.addEventListener(
+//   "click",
+//   (event) => {
+//     if (!notificationListID.contains(event.target)) {
+//       notificationList.classList.add("hidden");
+//       console.log("Yeeeeeees");
+//     }
+//   },
+//   false
+// );
 
 /**
  * * 1-Load all notifications after load the page.
@@ -66,8 +83,6 @@ notificationIconBell.addEventListener("click", () => {
  **/
 
 window.addEventListener("load", () => {
-  let myULNotificationList = document.querySelector(".notification__list");
-
   // * Set the numeber of the notifications on the bell icon.
   let getAfterElementOfIcon = document.querySelector(".notification__icon");
   getAfterElementOfIcon.setAttribute("get-numbers", arrItems.length);
@@ -84,9 +99,6 @@ mySelectionIconNotification.forEach((icon) => {
     let getMyContent = eo.target.parentElement.getElementsByClassName(
       "notification__list__selections__content"
     )[0];
-
-    console.log(getMyContent);
-    console.log(getMyContent.nextElementSibling);
 
     getMyContent.classList.toggle("visible-selection-content");
   });
@@ -133,8 +145,6 @@ const markAsReadNotification = () => {
         eo.currentTarget.parentElement.parentElement.previousElementSibling.querySelectorAll(
           ".notification__list__info p"
         );
-
-      console.log(getMyOneNotification);
 
       for (let i = 0; i < getMyOneNotification.length; i++) {
         getMyOneNotification[i].classList.toggle("lighter-font");
