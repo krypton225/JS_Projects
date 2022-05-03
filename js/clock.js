@@ -123,7 +123,9 @@ function setTimeInHTML() {
     mySeconds = `0${mySeconds}`;
   }
 
-  clockTime.innerHTML = `${myHours} : ${myMin} : ${mySeconds}`;
+  clockTime.innerHTML = `${myHours} : ${myMin} : ${mySeconds} ${
+    myDateObj.getHours() > 12 ? "pm" : "am"
+  }`;
 
   //   * Setting once the name, number, month and year of the current day.
   (function setFirstRowInDate() {
