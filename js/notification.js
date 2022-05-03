@@ -85,8 +85,8 @@ mySelectionIconNotification.forEach((icon) => {
       "notification__list__selections__content"
     )[0];
 
-    // console.log(getMyContent);
-    // console.log(getMyContent.nextElementSibling);
+    console.log(getMyContent);
+    console.log(getMyContent.nextElementSibling);
 
     getMyContent.classList.toggle("visible-selection-content");
   });
@@ -106,7 +106,7 @@ const deleteOneNotificcation = () => {
       eo.preventDefault();
 
       let myNotiInfo =
-        eo.target.parentElement.parentElement.parentElement.parentElement;
+        eo.currentTarget.parentElement.parentElement.parentElement;
 
       //   console.log(myNotiInfo);
       myNotiInfo.style.display = "none";
@@ -130,15 +130,19 @@ const markAsReadNotification = () => {
       eo.preventDefault();
 
       let getMyOneNotification =
-        eo.target.parentElement.parentElement.previousElementSibling.querySelectorAll(
-          "p"
+        eo.currentTarget.parentElement.parentElement.previousElementSibling.querySelectorAll(
+          ".notification__list__info p"
         );
 
-      //   console.log(getMyOneNotification);
+      console.log(getMyOneNotification);
 
-      getMyOneNotification.forEach((oneParagraph) => {
-        oneParagraph.classList.toggle("lighter-font");
-      });
+      for (let i = 0; i < getMyOneNotification.length; i++) {
+        getMyOneNotification[i].classList.toggle("lighter-font");
+      }
+
+      // getMyOneNotification.forEach((oneParagraph) => {
+      //   oneParagraph.classList.toggle("lighter-font");
+      // });
     });
   });
 };
