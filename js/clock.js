@@ -130,7 +130,7 @@ function setTimeInHTML() {
   //   * Setting once the name, number, month and year of the current day.
   (function setFirstRowInDate() {
     clockDayName.innerHTML = getDayName(myDateObj.getDay());
-    clockDayNumber.innerHTML = myDateObj.getDay();
+    clockDayNumber.innerHTML = myDateObj.getDate();
     clockDayMonth.innerHTML = getMonthName(myDateObj.getMonth());
     clockDayYear.innerHTML = myDateObj.getFullYear();
   })();
