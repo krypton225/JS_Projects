@@ -22,7 +22,7 @@ body {
 }
 
 .links__item {
-  width: 350px;
+  width: 450px;
   padding: 15px 20px;
   border-radius: 5px;
   border: 2px solid rgba(0, 0, 0, 0.26);
@@ -31,6 +31,12 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+
+/* @media (max-width: 768px) {
+  .links__item {
+    width: 800px;
+  }
+} */
 
 .links__item__title::before {
   counter-increment: increaing;
