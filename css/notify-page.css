@@ -168,6 +168,12 @@ body {
   font-size: 0.8rem;
   display: none;
   z-index: 999999;
+  transition: visibility 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.hide-icons-notify {
+  visibility: hidden;
+  opacity: 0;
 }
 
 .visible-selection-notify {

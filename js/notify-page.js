@@ -10,6 +10,21 @@ myIconOfOneNotify.forEach((icon) => {
   icon.addEventListener("click", (e) => {
     e.preventDefault();
 
+    // * Start check if the content of the selections shown in anywhere.
+    // * ------------------------------------------------------------
+    const myAllContents = document.querySelectorAll(
+      ".notify__list__selections__content"
+    );
+
+    myAllContents.forEach((itemContent) => {
+      if (itemContent.classList.contains("visible-selection-notify")) {
+        itemContent.classList.remove("visible-selection-notify");
+      }
+    });
+
+    // * ------------------------------------------------------------
+    // * End check if the content of the selections shown in anywhere.
+
     let notifyContentDiv = e.target.parentElement.getElementsByClassName(
       "notify__list__selections__content"
     )[0];
@@ -65,6 +80,15 @@ const markAsReadNotify = () => {
 
       for (let i = 0; i < getMyOneNotify.length; i++) {
         getMyOneNotify[i].classList.toggle("lighter-font");
+      }
+
+      let myContent =
+        eo.target.parentElement.parentElement.getElementsByClassName(
+          "notify__list__selections__content"
+        )[0];
+
+      if (myContent.classList.contains("visible-selection-notify")) {
+        myContent.classList.remove("visible-selection-notify");
       }
     });
   });
