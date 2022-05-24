@@ -1,0 +1,24 @@
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0f110f;
+}
+
+.user-name {
+  width: 23rem;
+  padding: 12px 2px;
+  color: #fff;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #222;
+  letter-spacing: 1.5px;
+  font-weight: 300;
+}
+
+input[class="user-name"]::placeholder {
+  transition: all 0.3s ease;
+}
