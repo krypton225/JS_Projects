@@ -1,0 +1,32 @@
+body {
+  overflow: hidden;
+  background-color: black;
+}
+
+.bg {
+  width: calc(100vw + 40px);
+  height: calc(100vh + 40px);
+  position: relative;
+  top: -20px;
+  left: -20px;
+  background-image: url("../imgs/background-2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+
+.blur {
+  padding: 10px 30px;
+  border-radius: 4px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  background-color: aliceblue;
+  color: #000;
+  user-select: none;
+  transition: opacity 0.3s ease-in 0.3s, visibility 0.3s ease-in 0.3s,
+    transform 0.3s ease-in;
+}
