@@ -51,6 +51,7 @@ body {
 }
 
 .my-form__control > label span.active {
+  color: cadetblue;
   transform: translateY(-17px);
 }
 
