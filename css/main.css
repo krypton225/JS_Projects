@@ -15,14 +15,6 @@ a {
   position: relative;
 }
 
-ul {
-  list-style: none;
-}
-
-img {
-  object-fit: cover;
-}
-
 a::after {
   content: "";
   position: absolute;
@@ -36,4 +28,12 @@ a::after {
 
 a:hover::after {
   width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  object-fit: cover;
 }
