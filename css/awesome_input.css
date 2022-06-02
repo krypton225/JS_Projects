@@ -1,0 +1,75 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(252, 194, 125);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.my-form {
+  width: 300px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  /* background-color: red; */
+}
+
+.my-form__control {
+  width: 90%;
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  align-items: flex-start;
+  /* background-color: green; */
+}
+
+.my-form__control > input {
+  width: 100%;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid cadetblue;
+  background-color: transparent;
+  color: black;
+  position: relative;
+}
+
+.my-form__control > label {
+  transform: translateY(14px);
+  color: rgba(0, 0, 0, 0.534);
+  user-select: none;
+}
+
+.my-form__control > label span {
+  display: inline-block;
+  letter-spacing: -3px;
+  transform: translateY(-2px);
+  transition: transform 0.3s ease-in-out;
+}
+
+.my-form__control > label span.active {
+  transform: translateY(-17px);
+}
+
+.my-form__btn {
+  width: 90%;
+  padding: 7px 10px;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  background-color: cadetblue;
+  color: #fff;
+  text-transform: capitalize;
+  letter-spacing: 1.1px;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in;
+}
+
+.my-form__btn:hover {
+  background-color: rgb(66, 116, 117);
+}
