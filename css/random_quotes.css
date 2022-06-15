@@ -1,0 +1,63 @@
+html {
+  font-size: 10px;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.904);
+}
+
+.quote {
+  width: 45rem;
+  height: 20rem;
+  position: relative;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  background: linear-gradient(to top, rgb(112, 200, 230), rgb(75, 131, 123));
+  color: #fff;
+}
+
+.quote__content {
+  width: 100%;
+  position: relative;
+  font-size: 1.4rem;
+  line-height: 1.7;
+  letter-spacing: 1px;
+  transition: all 0.3s ease-in;
+}
+
+.quote__content::first-letter {
+  text-transform: capitalize;
+}
+
+.quote__author {
+  position: relative;
+  font-size: 1.5rem;
+  letter-spacing: 1.45px;
+  text-transform: capitalize;
+  transition: all 0.3s ease-in;
+}
+
+.quote__author::before {
+  content: "- ";
+}
+
+.quote__icon {
+  position: absolute;
+  bottom: -6.6%;
+  right: 45%;
+  font-size: 3rem;
+  cursor: pointer;
+}
