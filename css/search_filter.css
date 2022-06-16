@@ -1,0 +1,63 @@
+html {
+  font-size: 10px;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: linear-gradient(to top, #24475f, #36468b);
+}
+
+.search {
+  width: 45rem;
+  height: 39rem;
+  padding: 0 10px;
+  position: fixed;
+  top: 0;
+  margin-top: 2rem;
+  overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+  .search {
+    width: 35rem;
+  }
+}
+
+.search::-webkit-scrollbar {
+  width: 5px;
+}
+
+.search::-webkit-scrollbar-thumb {
+  background-color: rgb(115, 172, 236);
+  border-radius: 10px;
+  outline: 1px solid slategrey;
+}
+
+.search__input {
+  width: 100%;
+  padding-inline: 1.7rem;
+  padding-block: 1.2rem;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  font-size: 1.3rem;
+  letter-spacing: 1.2px;
+  transition: all 0.2s ease-in;
+}
+
+.search__countries > p {
+  padding-block: 1.5rem;
+  padding-inline: 1.1rem;
+  background-color: aliceblue;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+}
+
+.search__countries > p:hover {
+  background-color: rgba(240, 248, 255, 0.795);
+}
