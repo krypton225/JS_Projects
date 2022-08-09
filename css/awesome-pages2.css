@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  color: #fff;
+  background-color: #232227;
+  font-family: "Cairo", sans-serif;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  font-size: 5rem;
+  background-color: cadetblue;
+}
+
+.native {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar {
+  padding: 10px;
+  border-radius: 10px;
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: gray;
+  font-size: 1.1rem;
+  z-index: 10000;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.navbar ul li {
+  margin: 0 40px;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.first {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: coral;
+  z-index: 3;
+  transition: all 0.3s ease-in-out;
+}
+
+.second {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: darkred;
+  z-index: 2;
+  transition: all 0.3s ease-in-out;
+}
+
+.third {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: darkturquoise;
+  z-index: 1;
+  transition: all 0.3s ease-in-out;
+}
+
+.high-index {
+  left: 0;
+  z-index: 1000;
+}
