@@ -1,0 +1,32 @@
+body {
+  background-image: linear-gradient(to top, #37ecba 0%, #72afd3 100%);
+}
+
+.form-control {
+  border: none;
+  border-radius: 0;
+  border-bottom: 2px solid #fff;
+  background-color: transparent;
+  color: #fff !important;
+}
+
+.form-control::placeholder {
+  color: rgb(241, 241, 241);
+}
+
+.form-control:focus {
+  box-shadow: none;
+  outline: none;
+  border-bottom: 2px solid #fff;
+  background-color: transparent;
+}
+
+.item {
+  padding: 7px 5px;
+  border-radius: 6px;
+  text-align: center;
+  background-color: cadetblue;
+  color: #fff;
+  margin-block: 10px;
+  font-size: 1.2rem;
+}
