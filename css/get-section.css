@@ -1,0 +1,51 @@
+section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+}
+
+.first {
+  background-color: darkkhaki;
+}
+
+.second {
+  background-color: pink;
+}
+
+.third {
+  background-color: orchid;
+  flex-direction: column;
+}
+
+.fourth {
+  background-color: palevioletred;
+}
+
+.progress {
+  width: 20rem;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2.4rem;
+  position: relative;
+  background-color: rgb(255, 255, 255);
+}
+
+.progress h6 {
+  position: absolute;
+  top: 20%;
+  left: -60px;
+  z-index: 222;
+}
+
+.progress span {
+  height: 100%;
+  margin-right: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: firebrick;
+  transition: all 0.4s ease-in-out;
+}
