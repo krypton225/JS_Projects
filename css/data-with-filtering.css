@@ -1,0 +1,15 @@
+ul {
+  list-style-type: none;
+  text-align: center;
+  font-size: 1.3rem;
+  letter-spacing: 1.4px;
+  text-transform: capitalize;
+}
+
+#input {
+  width: 60%;
+  display: block;
+  text-align: center;
+  margin: 15% auto 5%;
+  padding: 10px 6px;
+}
